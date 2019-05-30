@@ -25,14 +25,14 @@ public class DataSourceConfiguration {
     private String jdbcUrl;
     @Value("${jdbc.username}")
     private String jdbcUsername;
-    @Value("jdbc.password")
+    @Value("${jdbc.password}")
     private String jdbcPassword;
 
     @Bean(name = "dataSource")
     public ComboPooledDataSource createDataSource() throws PropertyVetoException {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         dataSource.setDriverClass(jdbcDriver);
-        dataSource.setJdbcUrl(jdbcUrl);
+        dataSource.setJdbcUrl(DESUtil.getDecryptString(jdbcUrl));
         dataSource.setUser(DESUtil.getDecryptString(jdbcUsername));
         dataSource.setPassword(DESUtil.getDecryptString(jdbcPassword));
         dataSource.setMaxPoolSize(30);

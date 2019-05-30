@@ -21,12 +21,20 @@ import java.io.IOException;
  */
 @Configuration
 public class SessionFactoryConfiguration {
-    @Value("${mybatis_config_file}")
-    private String mybatisConfigFile;
-    @Value("${mapper_path}")
-    private String mapperPath;
+    private static String mybatisConfigFile;
+    private static String mapperPath;
     @Value("${type_alias_package}")
     private String typeAliasPackage;
+
+    @Value("${mybatis_config_file}")
+    public void setMybatisConfigFile(String mybatisConfigFile) {
+        SessionFactoryConfiguration.mybatisConfigFile = mybatisConfigFile;
+    }
+
+    @Value("${mapper_path}")
+    public void setMapperPath(String mapperPath) {
+        SessionFactoryConfiguration.mapperPath = mapperPath;
+    }
 
     @Autowired
     private DataSource dataSource;
