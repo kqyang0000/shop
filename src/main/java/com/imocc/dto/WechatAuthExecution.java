@@ -1,7 +1,8 @@
 package com.imocc.dto;
 
-import com.imooc.o2o.entity.WechatAuth;
-import com.imooc.o2o.enums.WechatAuthStateEnum;
+
+import com.imocc.entity.WechatAuth;
+import com.imocc.enums.WechatAuthStateEnum;
 
 import java.util.List;
 

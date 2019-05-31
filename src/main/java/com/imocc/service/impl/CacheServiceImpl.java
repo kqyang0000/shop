@@ -1,7 +1,7 @@
 package com.imocc.service.impl;
 
-import com.imooc.o2o.cache.JedisUtil;
-import com.imooc.o2o.service.CacheService;
+import com.imocc.cache.JedisUtil;
+import com.imocc.service.CacheService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Set;

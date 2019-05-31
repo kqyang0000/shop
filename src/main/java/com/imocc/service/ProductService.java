@@ -1,9 +1,10 @@
 package com.imocc.service;
 
-import com.imooc.o2o.dto.ImageHolder;
-import com.imooc.o2o.dto.ProductExecution;
-import com.imooc.o2o.entity.Product;
-import com.imooc.o2o.exceptions.ProductOperationException;
+
+import com.imocc.dto.ImageHolder;
+import com.imocc.dto.ProductExecution;
+import com.imocc.entity.Product;
+import com.imocc.exceptions.ProductOperationException;
 
 import java.util.List;
 

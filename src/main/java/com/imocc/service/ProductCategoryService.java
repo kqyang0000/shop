@@ -1,8 +1,9 @@
 package com.imocc.service;
 
-import com.imooc.o2o.dto.ProductCategoryExecution;
-import com.imooc.o2o.entity.ProductCategory;
-import com.imooc.o2o.exceptions.ProductCategoryOperationException;
+
+import com.imocc.dto.ProductCategoryExecution;
+import com.imocc.entity.ProductCategory;
+import com.imocc.exceptions.ProductCategoryOperationException;
 
 import java.util.List;
 

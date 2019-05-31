@@ -1,7 +1,8 @@
 package com.imocc.service;
 
-import com.imooc.o2o.entity.HeadLine;
-import com.imooc.o2o.exceptions.HeadLineOperationException;
+
+import com.imocc.entity.HeadLine;
+import com.imocc.exceptions.HeadLineOperationException;
 
 import java.util.List;
 

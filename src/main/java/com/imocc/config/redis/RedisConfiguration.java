@@ -6,11 +6,13 @@ import com.imocc.util.DESUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
  * Created by kqyang on 2019/5/30.
  */
+@Configuration
 public class RedisConfiguration {
     @Value("${redis.hostname}")
     private String hostname;

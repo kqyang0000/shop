@@ -1,6 +1,7 @@
 package com.imocc.service;
 
-import com.imooc.o2o.entity.PersonInfo;
+
+import com.imocc.entity.PersonInfo;
 
 public interface PersonInfoService {
 

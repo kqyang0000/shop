@@ -1,7 +1,8 @@
 package com.imocc.dto;
 
-import com.imooc.o2o.entity.LocalAuth;
-import com.imooc.o2o.enums.LocalAuthStateEnum;
+
+import com.imocc.entity.LocalAuth;
+import com.imocc.enums.LocalAuthStateEnum;
 
 import java.util.List;
 

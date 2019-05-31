@@ -1,19 +1,20 @@
 package com.imocc.service;
 
-import com.imocc.o2o.BaseTest;
-import com.imooc.o2o.dto.ImageHolder;
-import com.imooc.o2o.dto.ProductExecution;
-import com.imooc.o2o.entity.Product;
-import com.imooc.o2o.entity.ProductCategory;
-import com.imooc.o2o.entity.Shop;
-import com.imooc.o2o.enums.ProductStateEnum;
-import com.imooc.o2o.service.ProductService;
+import com.imocc.dto.ImageHolder;
+import com.imocc.dto.ProductExecution;
+import com.imocc.entity.Product;
+import com.imocc.entity.ProductCategory;
+import com.imocc.entity.Shop;
+import com.imocc.enums.ProductStateEnum;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -23,8 +24,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class ProductServiceTest extends BaseTest {
+public class ProductServiceTest {
     @Autowired
     private ProductService productService;
 

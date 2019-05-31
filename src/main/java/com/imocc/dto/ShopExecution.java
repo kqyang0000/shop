@@ -1,7 +1,8 @@
 package com.imocc.dto;
 
-import com.imooc.o2o.entity.Shop;
-import com.imooc.o2o.enums.ShopStateEnum;
+
+import com.imocc.entity.Shop;
+import com.imocc.enums.ShopStateEnum;
 
 import java.util.List;
 

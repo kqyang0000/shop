@@ -1,7 +1,8 @@
 package com.imocc.service;
 
-import com.imooc.o2o.entity.Area;
-import com.imooc.o2o.exceptions.AreaOperationException;
+
+import com.imocc.entity.Area;
+import com.imocc.exceptions.AreaOperationException;
 
 import java.util.List;
 

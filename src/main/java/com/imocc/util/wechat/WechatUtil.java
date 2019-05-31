@@ -1,9 +1,9 @@
 package com.imocc.util.wechat;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.imooc.o2o.dto.UserAccessToken;
-import com.imooc.o2o.dto.WechatUser;
-import com.imooc.o2o.entity.PersonInfo;
+import com.imocc.dto.UserAccessToken;
+import com.imocc.dto.WechatUser;
+import com.imocc.entity.PersonInfo;
 import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,8 +1,9 @@
 package com.imocc.service;
 
-import com.imooc.o2o.dto.WechatAuthExecution;
-import com.imooc.o2o.entity.WechatAuth;
-import com.imooc.o2o.exceptions.WechatAuthOperationException;
+
+import com.imocc.dto.WechatAuthExecution;
+import com.imocc.entity.WechatAuth;
+import com.imocc.exceptions.WechatAuthOperationException;
 
 public interface WechatAuthService {
 

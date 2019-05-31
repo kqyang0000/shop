@@ -35,10 +35,14 @@ public class DataSourceConfiguration {
         dataSource.setJdbcUrl(DESUtil.getDecryptString(jdbcUrl));
         dataSource.setUser(DESUtil.getDecryptString(jdbcUsername));
         dataSource.setPassword(DESUtil.getDecryptString(jdbcPassword));
+        // c3p0最大连接池数量/最小连接池数量
         dataSource.setMaxPoolSize(30);
         dataSource.setMinPoolSize(10);
+        // 关闭连接后不自动提交
         dataSource.setAutoCommitOnClose(false);
+        // 连接超时时间
         dataSource.setCheckoutTimeout(10000);
+        // 连接失败重试此时
         dataSource.setAcquireRetryAttempts(2);
         return dataSource;
     }

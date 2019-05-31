@@ -1,15 +1,15 @@
 package com.imocc.service.impl;
 
-import com.imooc.o2o.dao.ShopDao;
-import com.imooc.o2o.dto.ImageHolder;
-import com.imooc.o2o.dto.ShopExecution;
-import com.imooc.o2o.entity.Shop;
-import com.imooc.o2o.enums.ShopStateEnum;
-import com.imooc.o2o.exceptions.ShopOperationException;
-import com.imooc.o2o.service.ShopService;
-import com.imooc.o2o.util.ImageUtil;
-import com.imooc.o2o.util.PageCalculator;
-import com.imooc.o2o.util.PathUtil;
+import com.imocc.dao.ShopDao;
+import com.imocc.dto.ImageHolder;
+import com.imocc.dto.ShopExecution;
+import com.imocc.entity.Shop;
+import com.imocc.enums.ShopStateEnum;
+import com.imocc.exceptions.ShopOperationException;
+import com.imocc.service.ShopService;
+import com.imocc.util.ImageUtil;
+import com.imocc.util.PageCalculator;
+import com.imocc.util.PathUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,6 +1,6 @@
 package com.imocc.util;
 
-import com.imooc.o2o.dto.ImageHolder;
+import com.imocc.dto.ImageHolder;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
 import org.slf4j.Logger;

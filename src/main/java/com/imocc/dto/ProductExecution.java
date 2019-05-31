@@ -1,7 +1,8 @@
 package com.imocc.dto;
 
-import com.imooc.o2o.entity.Product;
-import com.imooc.o2o.enums.ProductStateEnum;
+
+import com.imocc.entity.Product;
+import com.imocc.enums.ProductStateEnum;
 
 import java.util.List;
 

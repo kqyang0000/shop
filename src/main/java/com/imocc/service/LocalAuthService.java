@@ -1,8 +1,9 @@
 package com.imocc.service;
 
-import com.imooc.o2o.dto.LocalAuthExecution;
-import com.imooc.o2o.entity.LocalAuth;
-import com.imooc.o2o.exceptions.LocalAuthOperationException;
+
+import com.imocc.dto.LocalAuthExecution;
+import com.imocc.entity.LocalAuth;
+import com.imocc.exceptions.LocalAuthOperationException;
 
 public interface LocalAuthService {
     /**

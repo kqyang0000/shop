@@ -1,7 +1,8 @@
 package com.imocc.service;
 
-import com.imooc.o2o.entity.ShopCategory;
-import com.imooc.o2o.exceptions.ShopCategoryOperationException;
+
+import com.imocc.entity.ShopCategory;
+import com.imocc.exceptions.ShopCategoryOperationException;
 
 import java.util.List;
 

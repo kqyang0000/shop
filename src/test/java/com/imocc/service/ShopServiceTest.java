@@ -1,17 +1,18 @@
 package com.imocc.service;
 
-import com.imocc.o2o.BaseTest;
-import com.imooc.o2o.dto.ImageHolder;
-import com.imooc.o2o.dto.ShopExecution;
-import com.imooc.o2o.entity.Area;
-import com.imooc.o2o.entity.PersonInfo;
-import com.imooc.o2o.entity.Shop;
-import com.imooc.o2o.entity.ShopCategory;
-import com.imooc.o2o.enums.ShopStateEnum;
-import com.imooc.o2o.service.ShopService;
+import com.imocc.dto.ImageHolder;
+import com.imocc.dto.ShopExecution;
+import com.imocc.entity.Area;
+import com.imocc.entity.PersonInfo;
+import com.imocc.entity.Shop;
+import com.imocc.entity.ShopCategory;
+import com.imocc.enums.ShopStateEnum;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,7 +20,9 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Date;
 
-public class ShopServiceTest extends BaseTest {
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class ShopServiceTest {
 
     @Autowired
     private ShopService shopService;

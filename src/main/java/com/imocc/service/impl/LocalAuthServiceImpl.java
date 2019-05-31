@@ -1,12 +1,12 @@
 package com.imocc.service.impl;
 
-import com.imooc.o2o.dao.LocalAuthDao;
-import com.imooc.o2o.dto.LocalAuthExecution;
-import com.imooc.o2o.entity.LocalAuth;
-import com.imooc.o2o.enums.LocalAuthStateEnum;
-import com.imooc.o2o.exceptions.LocalAuthOperationException;
-import com.imooc.o2o.service.LocalAuthService;
-import com.imooc.o2o.util.MD5Util;
+import com.imocc.dao.LocalAuthDao;
+import com.imocc.dto.LocalAuthExecution;
+import com.imocc.entity.LocalAuth;
+import com.imocc.enums.LocalAuthStateEnum;
+import com.imocc.exceptions.LocalAuthOperationException;
+import com.imocc.service.LocalAuthService;
+import com.imocc.util.MD5Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,8 @@
 package com.imocc.service.impl;
 
-import com.imooc.o2o.dao.PersonInfoDao;
-import com.imooc.o2o.entity.PersonInfo;
-import com.imooc.o2o.service.PersonInfoService;
+import com.imocc.dao.PersonInfoDao;
+import com.imocc.entity.PersonInfo;
+import com.imocc.service.PersonInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

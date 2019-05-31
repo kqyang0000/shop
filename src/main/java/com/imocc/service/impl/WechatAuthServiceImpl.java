@@ -1,13 +1,13 @@
 package com.imocc.service.impl;
 
-import com.imooc.o2o.dao.PersonInfoDao;
-import com.imooc.o2o.dao.WechatAuthDao;
-import com.imooc.o2o.dto.WechatAuthExecution;
-import com.imooc.o2o.entity.PersonInfo;
-import com.imooc.o2o.entity.WechatAuth;
-import com.imooc.o2o.enums.WechatAuthStateEnum;
-import com.imooc.o2o.exceptions.WechatAuthOperationException;
-import com.imooc.o2o.service.WechatAuthService;
+import com.imocc.dao.PersonInfoDao;
+import com.imocc.dao.WechatAuthDao;
+import com.imocc.dto.WechatAuthExecution;
+import com.imocc.entity.PersonInfo;
+import com.imocc.entity.WechatAuth;
+import com.imocc.enums.WechatAuthStateEnum;
+import com.imocc.exceptions.WechatAuthOperationException;
+import com.imocc.service.WechatAuthService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

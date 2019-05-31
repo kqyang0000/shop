@@ -1,12 +1,12 @@
 package com.imocc.service.impl;
 
-import com.imooc.o2o.dao.ProductCategoryDao;
-import com.imooc.o2o.dao.ProductDao;
-import com.imooc.o2o.dto.ProductCategoryExecution;
-import com.imooc.o2o.entity.ProductCategory;
-import com.imooc.o2o.enums.ProductCategoryStateEnum;
-import com.imooc.o2o.exceptions.ProductCategoryOperationException;
-import com.imooc.o2o.service.ProductCategoryService;
+import com.imocc.dao.ProductCategoryDao;
+import com.imocc.dao.ProductDao;
+import com.imocc.dto.ProductCategoryExecution;
+import com.imocc.entity.ProductCategory;
+import com.imocc.enums.ProductCategoryStateEnum;
+import com.imocc.exceptions.ProductCategoryOperationException;
+import com.imocc.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

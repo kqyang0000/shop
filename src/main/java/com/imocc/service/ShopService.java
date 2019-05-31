@@ -1,10 +1,10 @@
 package com.imocc.service;
 
-import com.imooc.o2o.dto.ImageHolder;
-import com.imooc.o2o.dto.ShopExecution;
-import com.imooc.o2o.entity.Shop;
-import com.imooc.o2o.exceptions.ShopOperationException;
 
+import com.imocc.dto.ImageHolder;
+import com.imocc.dto.ShopExecution;
+import com.imocc.entity.Shop;
+import com.imocc.exceptions.ShopOperationException;
 
 public interface ShopService {
     /**
