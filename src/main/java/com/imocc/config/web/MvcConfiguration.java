@@ -1,6 +1,8 @@
 package com.imocc.config.web;
 
 import com.google.code.kaptcha.servlet.KaptchaServlet;
+import com.imocc.interceptor.shopadmin.ShopLoginInterceptor;
+import com.imocc.interceptor.shopadmin.ShopPermissionInterception;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -10,10 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 /**
@@ -65,7 +64,8 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter implements Applica
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         //registry.addResourceHandler("/resources/**").addResourceLocations("classpath:/resources/");
-        registry.addResourceHandler("/upload/**").addResourceLocations("file:/home/data/image/upload/");
+        //registry.addResourceHandler("/upload/**").addResourceLocations("file:/home/data/image/upload/");
+        registry.addResourceHandler("/upload/**").addResourceLocations("file:D:/projectdev/image/upload/");
     }
 
     /**
@@ -127,7 +127,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter implements Applica
      */
     @Bean
     public ServletRegistrationBean<KaptchaServlet> servletRegistrationBean() {
-        ServletRegistrationBean<KaptchaServlet> servlet = new ServletRegistrationBean<>(new KaptchaServlet(),"/Kaptcha");
+        ServletRegistrationBean<KaptchaServlet> servlet = new ServletRegistrationBean<>(new KaptchaServlet(), "/Kaptcha");
         servlet.addInitParameter("kaptcha.border", border);
         servlet.addInitParameter("kaptcha.textproducer.font.color", fcolor);
         servlet.addInitParameter("kaptcha.image.width", width);
@@ -138,5 +138,33 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter implements Applica
         servlet.addInitParameter("kaptcha.textproducer.char.length", charLength);
         servlet.addInitParameter("kaptcha.textproducer.font.names", fnames);
         return servlet;
+    }
+
+    /**
+     * <p>添加拦截器
+     *
+     * @author kqyang
+     * @version 1.0
+     * @date 2019/6/1 15:45
+     */
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        String interceptPath = "/shopadmin/**";
+        // 注册拦截器
+        InterceptorRegistration loginIR = registry.addInterceptor(new ShopLoginInterceptor());
+        // 配置拦截的路径
+        loginIR.addPathPatterns(interceptPath);
+        // 还可以注册其他的拦截器
+        InterceptorRegistration permissionIR = registry.addInterceptor(new ShopPermissionInterception());
+        // 配置拦截的路径
+        permissionIR.addPathPatterns(interceptPath);
+        // 配置不拦截的路径
+        permissionIR.excludePathPatterns("/shopadmin/shoplist");
+        permissionIR.excludePathPatterns("/shopadmin/getshoplist");
+        permissionIR.excludePathPatterns("/shopadmin/getshopinitinfo");
+        permissionIR.excludePathPatterns("/shopadmin/registershop");
+        permissionIR.excludePathPatterns("/shopadmin/shopoperation");
+        permissionIR.excludePathPatterns("/shopadmin/shopmanage");
+        permissionIR.excludePathPatterns("/shopadmin/getshopmanagementinfo");
     }
 }
