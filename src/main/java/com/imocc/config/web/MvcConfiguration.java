@@ -48,6 +48,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter implements Applica
 
     // spring容器
     private ApplicationContext applicationContext;
+    private static String os = System.getProperty("os.name");
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
@@ -64,8 +65,11 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter implements Applica
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         //registry.addResourceHandler("/resources/**").addResourceLocations("classpath:/resources/");
-        //registry.addResourceHandler("/upload/**").addResourceLocations("file:/home/data/image/upload/");
-        registry.addResourceHandler("/upload/**").addResourceLocations("file:D:/projectdev/image/upload/");
+        String locationPath = "file:/home/data/image/upload/";
+        if(os.toLowerCase().startsWith("win")){
+            locationPath = "file:D:/projectdev/image/upload/";
+        }
+        registry.addResourceHandler("/upload/**").addResourceLocations(locationPath);
     }
 
     /**
